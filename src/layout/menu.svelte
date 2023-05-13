@@ -7,7 +7,7 @@
                           fill-rule="evenodd"
                           clip-rule="evenodd"
                           d="M0.00172773 0V6.85398C0.00172773 6.85398 -0.133178 9.01207 1.98092 10.8388L13.6912 21.9964L19.7809 21.9181L18.8042 9.88248L16.4951 7.17289L9.23799 0H0.00172773Z"
-                          fill="#7367F0" />
+                          fill="#fc0" />
                   <path
                           opacity="0.06"
                           fill-rule="evenodd"
@@ -24,15 +24,10 @@
                           fill-rule="evenodd"
                           clip-rule="evenodd"
                           d="M7.77295 16.3566L23.6563 0H32V6.88383C32 6.88383 31.8262 9.17836 30.6591 10.4057L19.7824 22H13.6938L7.77295 16.3566Z"
-                          fill="#7367F0" />
+                          fill="#fc0" />
                 </svg>
               </span>
-            <span class="app-brand-text demo menu-text fw-bold">Vuexy</span>
-        </a>
-
-        <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
-            <i class="ti menu-toggle-icon d-none d-xl-block ti-sm align-middle"></i>
-            <i class="ti ti-x d-block d-xl-none ti-sm align-middle"></i>
+            <span class="app-brand-text demo menu-text fw-bold">VuelingBoard</span>
         </a>
     </div>
 
@@ -40,9 +35,6 @@
 
     <ul class="menu-inner py-1">
         <!-- Apps & Pages -->
-        <li class="menu-header small text-uppercase">
-            <span class="menu-header-text">Apps &amp; Pages</span>
-        </li>
         <li class="menu-item">
             <a href="app-chat.html" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-messages"></i>
