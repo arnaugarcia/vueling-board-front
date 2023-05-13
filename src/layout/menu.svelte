@@ -36,41 +36,33 @@
     <ul class="menu-inner py-1">
         <!-- Apps & Pages -->
         <li class="menu-item">
-            <a href="app-chat.html" class="menu-link">
+            <a href="" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-messages"></i>
                 <div data-i18n="Chat">Chat</div>
             </a>
         </li>
         <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons ti ti-file-dollar"></i>
-                <div data-i18n="Invoice">Games</div>
-
+            <a href="/games/quizz" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-device-gamepad"></i>
+                <div data-i18n="Calendar">Games</div>
             </a>
-            <ul class="menu-sub">
-                <li class="menu-item">
-                    <a href="app-invoice-list.html" class="menu-link">
-                        <div data-i18n="List">Cluedo</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="app-invoice-preview.html" class="menu-link">
-                        <div data-i18n="Preview">Storytelling</div>
-                    </a>
-                </li>
-            </ul>
         </li>
         <li class="menu-item">
             <a href="app-calendar.html" class="menu-link">
-                <i class="menu-icon tf-icons ti ti-calendar"></i>
-                <div data-i18n="Calendar">Fligth information</div>
-                <div class="badge bg-label-danger rounded-pill ms-auto">4</div>
+                <i class="menu-icon tf-icons ti ti-plane-departure"></i>
+                <div data-i18n="Calendar">Fligth Information</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="app-chat.html" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-plane-arrival"></i>
+                <div data-i18n="Chat">Destination Information</div>
             </a>
         </li>
         <li class="menu-item">
             <a href="app-kanban.html" class="menu-link">
-                <i class="menu-icon tf-icons ti ti-layout-kanban"></i>
-                <div data-i18n="Kanban">Map</div>
+                <i class="menu-icon tf-icons ti ti-book"></i>
+                <div data-i18n="Kanban">Storytelling</div>
             </a>
         </li>
     </ul>
