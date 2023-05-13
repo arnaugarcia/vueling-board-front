@@ -54,7 +54,7 @@
             </a>
         </li>
         <li class="menu-item">
-            <a href="app-chat.html" class="menu-link">
+            <a href="/destinationInformation" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-plane-arrival"></i>
                 <div data-i18n="DInfo">Destination Information</div>
             </a>

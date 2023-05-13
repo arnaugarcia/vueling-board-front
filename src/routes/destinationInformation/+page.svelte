@@ -17,7 +17,7 @@
                         <img class="d-block w-100" src="../../assets/img/elements/paris2.jpg" alt="Second slide" />
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="../../assets/img/elements/paris3.jpg" alt="Third slide" />
+                        <img class="d-block w-100" src="../../assets/img/elements/paris3.png" alt="Third slide" />
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
