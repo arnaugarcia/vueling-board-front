@@ -1,3 +1,6 @@
+<script>
+    import MenuComponent from '/src/layout/menu/menu.svelte';
+</script>
 <div class="layout-wrapper layout-content-navbar">
     <div class="layout-container">
 
