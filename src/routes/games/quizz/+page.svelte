@@ -2,20 +2,32 @@
     @import '/css/pages/page-faq.css';
 </style>
 <script>
-
     import AnswerComponent from '/src/components/quizz/answer.svelte'
+    import {onMount} from "svelte";
+    let question = 'prueba1'
+
+    onMount(() => {
+        fetch ('http://localhost:3000/questions')
+            .then(responses => responses.json())
+            .then(data => {
+                console.log(data);
+                question = data[0].questionText;
+            });
+    })
+
 
     let answers = [
-        {id : '0', title : 'Respuesta 1'},
-        {id : '1', title : 'Respuesta 2'},
-        {id : '2', title : 'Respuesta 3'},
-        {id : '3', title : 'Respuesta 4'}];
+        {id: '0', title: 'Respuesta 1'},
+        {id: '1', title: 'Respuesta 2'},
+        {id: '2', title: 'Respuesta 3'},
+        {id: '3', title: 'Respuesta 4'}
+    ];
 
 </script>
 
 <div class="container-xxl flex-grow-1 container-p-y">
     <div class="faq-header d-flex flex-column justify-content-center align-items-center rounded">
-        <h3 class="text-center">Pregunta :)</h3>
+        <h3 class="text-center">{question}</h3>
     </div>
 </div>
 <div class="row">
