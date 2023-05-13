@@ -59,11 +59,5 @@
                 <div data-i18n="DInfo">Destination Information</div>
             </a>
         </li>
-        <li class="menu-item">
-            <a href="app-kanban.html" class="menu-link">
-                <i class="menu-icon tf-icons ti ti-book"></i>
-                <div data-i18n="Storytelling">Storytelling</div>
-            </a>
-        </li>
     </ul>
 </aside>
