@@ -3,29 +3,11 @@
         <div
                 class="footer-container d-flex align-items-center justify-content-between py-2 flex-md-row flex-column">
             <div>
-                ©
+                Vueling Board
                 <script>
                     document.write(new Date().getFullYear());
                 </script>
-                , made with ❤️ by <a href="https://pixinvent.com" target="_blank" class="fw-semibold">Pixinvent</a>
-            </div>
-            <div>
-                <a href="https://themeforest.net/licenses/standard" class="footer-link me-4"
-                   target="_blank">License</a>
-                <a href="https://1.envato.market/pixinvent_portfolio" target="_blank"
-                   class="footer-link me-4">More Themes</a>
-
-                <a
-                        href="https://demos.pixinvent.com/vuexy-html-admin-template/documentation/"
-                        target="_blank"
-                        class="footer-link me-4"
-                >Documentation</a
-                >
-
-                <a href="https://pixinvent.ticksy.com/" target="_blank"
-                   class="footer-link d-none d-sm-inline-block"
-                >Support</a
-                >
+                , made with ❤️ by <a href="https://www.linkedin.com/in/arnaugarcia97/" target="_blank" class="fw-semibold">Arnau Garcia</a>, <a href="https://www.linkedin.com/in/lucas-tolón-pacheco-2323aa20b/" target="_blank" class="fw-semibold">Lucas Tolón</a> and <a href="https://www.linkedin.com/in/raimonpop/" target="_blank" class="fw-semibold">Raimon Velasco</a>
             </div>
         </div>
     </div>
