@@ -3,18 +3,25 @@
 </style>
 <script>
     import AnswerComponent from '/src/components/quizz/answer.svelte'
+    import {onMount} from "svelte";
     let question = 'prueba1'
-    fetch ('http://localhost:3000/questions')
-        .then(respones => respones.json())
-        .then(data => {
-            console.log(data[0].questionText);
-            question = data[0].questionText;
-        });
+
+    onMount(() => {
+        fetch ('http://localhost:3000/questions')
+            .then(responses => responses.json())
+            .then(data => {
+                console.log(data);
+                question = data[0].questionText;
+            });
+    })
+
+
     let answers = [
-        {id : '0', title : 'Respuesta 1'},
-        {id : '1', title : 'Respuesta 2'},
-        {id : '2', title : 'Respuesta 3'},
-        {id : '3', title : 'Respuesta 4'}];
+        {id: '0', title: 'Respuesta 1'},
+        {id: '1', title: 'Respuesta 2'},
+        {id: '2', title: 'Respuesta 3'},
+        {id: '3', title: 'Respuesta 4'}
+    ];
 
 </script>
 
