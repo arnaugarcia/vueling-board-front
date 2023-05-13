@@ -42,27 +42,27 @@
             </a>
         </li>
         <li class="menu-item">
-            <a href="/games/quizz" class="menu-link">
+            <a href="/games" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-device-gamepad"></i>
-                <div data-i18n="Calendar">Games</div>
+                <div data-i18n="Games">Games</div>
             </a>
         </li>
         <li class="menu-item">
             <a href="app-calendar.html" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-plane-departure"></i>
-                <div data-i18n="Calendar">Fligth Information</div>
+                <div data-i18n="FInfo">Fligth Information</div>
             </a>
         </li>
         <li class="menu-item">
             <a href="app-chat.html" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-plane-arrival"></i>
-                <div data-i18n="Chat">Destination Information</div>
+                <div data-i18n="DInfo">Destination Information</div>
             </a>
         </li>
         <li class="menu-item">
             <a href="app-kanban.html" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-book"></i>
-                <div data-i18n="Kanban">Storytelling</div>
+                <div data-i18n="Storytelling">Storytelling</div>
             </a>
         </li>
     </ul>
