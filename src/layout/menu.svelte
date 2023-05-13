@@ -58,22 +58,12 @@
             <ul class="menu-sub">
                 <li class="menu-item">
                     <a href="app-invoice-list.html" class="menu-link">
-                        <div data-i18n="List">List</div>
+                        <div data-i18n="List">Cluedo</div>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="app-invoice-preview.html" class="menu-link">
-                        <div data-i18n="Preview">Preview</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="app-invoice-edit.html" class="menu-link">
-                        <div data-i18n="Edit">Edit</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="app-invoice-add.html" class="menu-link">
-                        <div data-i18n="Add">Add</div>
+                        <div data-i18n="Preview">Storytelling</div>
                     </a>
                 </li>
             </ul>
