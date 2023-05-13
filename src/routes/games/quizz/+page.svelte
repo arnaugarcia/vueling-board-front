@@ -22,9 +22,12 @@
     <div class="col-lg- mx-auto mb-4">
         <div class="row">
 
-            {#each answers as answer}
-                <AnswerComponent option={answer}/>
+            {#each answers as answer, i}
+
+                <AnswerComponent option={answer} index={i}/>
+
             {/each}
+
         </div>
     </div>
 </div>
