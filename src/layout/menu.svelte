@@ -27,12 +27,7 @@
                           fill="#7367F0" />
                 </svg>
               </span>
-            <span class="app-brand-text demo menu-text fw-bold">Vuexy</span>
-        </a>
-
-        <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
-            <i class="ti menu-toggle-icon d-none d-xl-block ti-sm align-middle"></i>
-            <i class="ti ti-x d-block d-xl-none ti-sm align-middle"></i>
+            <span class="app-brand-text demo menu-text fw-bold">VuelingBoard</span>
         </a>
     </div>
 
@@ -40,9 +35,6 @@
 
     <ul class="menu-inner py-1">
         <!-- Apps & Pages -->
-        <li class="menu-header small text-uppercase">
-            <span class="menu-header-text">Apps &amp; Pages</span>
-        </li>
         <li class="menu-item">
             <a href="app-chat.html" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-messages"></i>
