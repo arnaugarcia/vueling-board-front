@@ -1,5 +1,5 @@
 .faq-header {
-  background: url("../../../img/pages/header.png");
+  background: url("/assets/img/pages/header.png");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 300px !important;

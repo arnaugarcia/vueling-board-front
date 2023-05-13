@@ -2,6 +2,7 @@
     import MenuComponent from '/src/layout/menu.svelte';
     import FooterComponent from '/src/layout/footer.svelte';
     import NavbarComponent from '/src/layout/navbar.svelte';
+    import QuizzGameComponent from '/src/components/quizzGame.svelte';
 </script>
 <div class="layout-wrapper layout-content-navbar">
     <div class="layout-container">
@@ -17,7 +18,6 @@
             <!-- Content wrapper -->
             <div class="content-wrapper">
                 <!-- Content -->
-
                 <div class="container-xxl flex-grow-1 container-p-y">
                     <slot></slot>
                 </div>
