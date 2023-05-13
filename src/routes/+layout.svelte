@@ -2,7 +2,6 @@
     import MenuComponent from '/src/layout/menu.svelte';
     import FooterComponent from '/src/layout/footer.svelte';
     import NavbarComponent from '/src/layout/navbar.svelte';
-    import QuizzGameComponent from '/src/components/quizzGame.svelte';
 </script>
 <div class="layout-wrapper layout-content-navbar">
     <div class="layout-container">
