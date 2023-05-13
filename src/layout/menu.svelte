@@ -48,7 +48,7 @@
             </a>
         </li>
         <li class="menu-item">
-            <a href="app-calendar.html" class="menu-link">
+            <a href="/flightInformation" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-plane-departure"></i>
                 <div data-i18n="FInfo">Fligth Information</div>
             </a>
