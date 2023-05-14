@@ -75,7 +75,7 @@
                         <div class="d-flex overflow-hidden">
                             <div class="chat-message-wrapper flex-grow-1">
                                 <div class="chat-message-text">
-                                    <p class="mb-0">How can we help? We're here for you! 😄</p>
+                                    <p class="mb-0">{message}</p>
                                 </div>
                             </div>
                         </div>
