@@ -6,11 +6,6 @@
     import {onMount} from "svelte";
     import {getCookie} from "svelte-cookie";
 
-    const cookie = getCookie('username');
-
-    if (!cookie || cookie === '') {
-        window.location.href = '/games/login';
-    }
     let answers = [
         {id: '0', title: 'Respuesta 1'},
         {id: '1', title: 'Respuesta 2'},
@@ -22,6 +17,14 @@
     let options = 'http://localhost:3000/questions/' + id + '/options';
 
     onMount(() => {
+        const cookie = getCookie('username');
+
+        console.log('Authenticating user: ' + cookie);
+
+        if (!cookie || cookie === '') {
+            window.location.href = '/games/login';
+        }
+
         fetch('http://localhost:3000/questions')
             .then(responses => responses.json())
             .then(data => {
@@ -34,7 +37,7 @@
         fetch(options)
             .then(responses => responses.json())
             .then(data => {
-                answers[0].title = data[0].title;
+                if (data[0]) answers[0].title = data[0].title;
             });
 
     })
