@@ -15,16 +15,6 @@
                         autofocus />
             </div>
             <div class="mb-3">
-                <label for="seat" class="form-label">Seat Number</label>
-                <input
-                        type="text"
-                        class="form-control"
-                        id="seat"
-                        name="seat"
-                        placeholder="Enter your seat number"
-                        autofocus />
-            </div>
-            <div class="mb-3">
                 <button class="btn btn-primary d-grid w-100" type="submit">Enter</button>
             </div>
         </form>
