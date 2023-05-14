@@ -1,3 +1,24 @@
+<script>
+    import {onMount} from 'svelte';
+    import store from "../../components/chat/store.js";
+
+    let message;
+    let messages = [];
+
+    onMount(() => {
+        store.subscribe(currentMessage => {
+            messages = [...messages, currentMessage];
+        })
+    })
+
+    function onSendMessage() {
+        if (message.length > 0) {
+            store.sendMessage(message);
+            message = "";
+        }
+    }
+</script>
+
 <div class="col app-chat-history bg-body">
     <div class="chat-history-wrapper">
         <div class="chat-history-header border-bottom">
@@ -19,7 +40,7 @@
                     </div>
                     <div class="chat-contact-info flex-grow-1 ms-2">
                         <h6 class="m-0">Felecia Rower</h6>
-                        <small class="user-status text-muted">NextJS developer</small>
+                        <small class="user-status text-muted">Vueling Staff</small>
                     </div>
                 </div>
                 <div class="d-flex align-items-center">
@@ -49,166 +70,25 @@
         </div>
         <div class="chat-history-body bg-body">
             <ul class="list-unstyled chat-history">
-                <li class="chat-message chat-message-right">
-                    <div class="d-flex overflow-hidden">
-                        <div class="chat-message-wrapper flex-grow-1">
-                            <div class="chat-message-text">
-                                <p class="mb-0">How can we help? We're here for you! 😄</p>
-                            </div>
-                            <div class="text-end text-muted mt-1">
-                                <i class="ti ti-checks ti-xs me-1 text-success"></i>
-                                <small>10:00 AM</small>
+                {#each messages as message, i}
+                    <li class={'chat-message' + i % 2 == 0 ? "left" :  "right" + 'chat-message-right mt-4'}>
+                        <div class="d-flex overflow-hidden">
+                            <div class="chat-message-wrapper flex-grow-1">
+                                <div class="chat-message-text">
+                                    <p class="mb-0">How can we help? We're here for you! 😄</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="user-avatar flex-shrink-0 ms-3">
-                            <div class="avatar avatar-sm">
-                                <img src="../../assets/img/avatars/1.png" alt="Avatar" class="rounded-circle" />
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="chat-message">
-                    <div class="d-flex overflow-hidden">
-                        <div class="user-avatar flex-shrink-0 me-3">
-                            <div class="avatar avatar-sm">
-                                <img src="../../assets/img/avatars/2.png" alt="Avatar" class="rounded-circle" />
-                            </div>
-                        </div>
-                        <div class="chat-message-wrapper flex-grow-1">
-                            <div class="chat-message-text">
-                                <p class="mb-0">Hey John, I am looking for the best admin template.</p>
-                                <p class="mb-0">Could you please help me to find it out? 🤔</p>
-                            </div>
-                            <div class="chat-message-text mt-2">
-                                <p class="mb-0">It should be Bootstrap 5 compatible.</p>
-                            </div>
-                            <div class="text-muted mt-1">
-                                <small>10:02 AM</small>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="chat-message chat-message-right">
-                    <div class="d-flex overflow-hidden">
-                        <div class="chat-message-wrapper flex-grow-1">
-                            <div class="chat-message-text">
-                                <p class="mb-0">Vuexy has all the components you'll ever need in a app.</p>
-                            </div>
-                            <div class="text-end text-muted mt-1">
-                                <i class="ti ti-checks ti-xs me-1 text-success"></i>
-                                <small>10:03 AM</small>
-                            </div>
-                        </div>
-                        <div class="user-avatar flex-shrink-0 ms-3">
-                            <div class="avatar avatar-sm">
-                                <img src="../../assets/img/avatars/1.png" alt="Avatar" class="rounded-circle" />
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="chat-message">
-                    <div class="d-flex overflow-hidden">
-                        <div class="user-avatar flex-shrink-0 me-3">
-                            <div class="avatar avatar-sm">
-                                <img src="../../assets/img/avatars/2.png" alt="Avatar" class="rounded-circle" />
-                            </div>
-                        </div>
-                        <div class="chat-message-wrapper flex-grow-1">
-                            <div class="chat-message-text">
-                                <p class="mb-0">Looks clean and fresh UI. 😃</p>
-                            </div>
-                            <div class="chat-message-text mt-2">
-                                <p class="mb-0">It's perfect for my next project.</p>
-                            </div>
-                            <div class="chat-message-text mt-2">
-                                <p class="mb-0">How can I purchase it?</p>
-                            </div>
-                            <div class="text-muted mt-1">
-                                <small>10:05 AM</small>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="chat-message chat-message-right">
-                    <div class="d-flex overflow-hidden">
-                        <div class="chat-message-wrapper flex-grow-1">
-                            <div class="chat-message-text">
-                                <p class="mb-0">Thanks, you can purchase it.</p>
-                            </div>
-                            <div class="text-end text-muted mt-1">
-                                <i class="ti ti-checks ti-xs me-1 text-success"></i>
-                                <small>10:06 AM</small>
-                            </div>
-                        </div>
-                        <div class="user-avatar flex-shrink-0 ms-3">
-                            <div class="avatar avatar-sm">
-                                <img src="../../assets/img/avatars/1.png" alt="Avatar" class="rounded-circle" />
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="chat-message chat-message-right">
-                    <div class="d-flex overflow-hidden">
-                        <div class="chat-message-wrapper flex-grow-1">
-                            <div class="chat-message-text">
-                                <p class="mb-0">Great, Feel free to get in touch.</p>
-                            </div>
-                            <div class="text-end text-muted mt-1">
-                                <i class="ti ti-checks ti-xs me-1 text-success"></i>
-                                <small>10:10 AM</small>
-                            </div>
-                        </div>
-                        <div class="user-avatar flex-shrink-0 ms-3">
-                            <div class="avatar avatar-sm">
-                                <img src="../../assets/img/avatars/1.png" alt="Avatar" class="rounded-circle" />
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="chat-message">
-                    <div class="d-flex overflow-hidden">
-                        <div class="user-avatar flex-shrink-0 me-3">
-                            <div class="avatar avatar-sm">
-                                <img src="../../assets/img/avatars/2.png" alt="Avatar" class="rounded-circle" />
-                            </div>
-                        </div>
-                        <div class="chat-message-wrapper flex-grow-1">
-                            <div class="chat-message-text">
-                                <p class="mb-0">Do you have design files for Vuexy?</p>
-                            </div>
-                            <div class="text-muted mt-1">
-                                <small>10:15 AM</small>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="chat-message chat-message-right">
-                    <div class="d-flex overflow-hidden">
-                        <div class="chat-message-wrapper flex-grow-1 w-50">
-                            <div class="chat-message-text">
-                                <p class="mb-0">
-                                    Yes that's correct documentation file, Design files are included with the template.
-                                </p>
-                            </div>
-                            <div class="text-end text-muted mt-1">
-                                <i class="ti ti-checks ti-xs me-1"></i>
-                                <small>10:15 AM</small>
-                            </div>
-                        </div>
-                        <div class="user-avatar flex-shrink-0 ms-3">
-                            <div class="avatar avatar-sm">
-                                <img src="../../assets/img/avatars/1.png" alt="Avatar" class="rounded-circle" />
-                            </div>
-                        </div>
-                    </div>
-                </li>
+                    </li>
+                {/each}
+
             </ul>
         </div>
         <!-- Chat message form -->
         <div class="chat-history-footer shadow-sm">
             <form class="form-send-message d-flex justify-content-between align-items-center">
-                <input
-                        class="form-control message-input border-0 me-3 shadow-none"
+                <input bind:value={message}
+                       class="form-control message-input border-0 me-3 shadow-none"
                         placeholder="Type your message here" />
                 <div class="message-actions d-flex align-items-center">
                     <i class="speech-to-text ti ti-microphone ti-sm cursor-pointer"></i>
@@ -216,7 +96,7 @@
                         <i class="ti ti-photo ti-sm cursor-pointer mx-3"></i>
                         <input type="file" id="attach-doc" hidden />
                     </label>
-                    <button class="btn btn-primary d-flex send-msg-btn">
+                    <button class="btn btn-primary d-flex send-msg-btn" on:click={onSendMessage}>
                         <i class="ti ti-send me-md-1 me-0"></i>
                         <span class="align-middle d-md-inline-block d-none">Send</span>
                     </button>
