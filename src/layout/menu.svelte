@@ -50,13 +50,13 @@
         <li class="menu-item">
             <a href="/flight-information" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-plane-departure"></i>
-                <div data-i18n="FInfo">Fligth Information</div>
+                <div data-i18n="Flight Information">Flight Information</div>
             </a>
         </li>
         <li class="menu-item">
             <a href="/destination-information" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-plane-arrival"></i>
-                <div data-i18n="DInfo">Destination Information</div>
+                <div data-i18n="Destination Information">Destination Information</div>
             </a>
         </li>
     </ul>
