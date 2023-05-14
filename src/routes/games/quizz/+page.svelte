@@ -4,6 +4,13 @@
 <script>
     import AnswerComponent from '/src/components/quizz/answer.svelte'
     import {onMount} from "svelte";
+    import {getCookie} from "svelte-cookie";
+
+    const cookie = getCookie('auth');
+
+    if (!cookie || cookie === '') {
+        window.location.href = '/games/login';
+    }
     let answers = [
         {id: '0', title: 'Respuesta 1'},
         {id: '1', title: 'Respuesta 2'},
@@ -12,28 +19,25 @@
     ];
     let question = 'prueba1'
     let id = 0;
-    let opciones = 'http://localhost:3000/questions/'+id+'/options';
+    let options = 'http://localhost:3000/questions/' + id + '/options';
+
     onMount(() => {
-        fetch ('http://localhost:3000/questions')
+        fetch('http://localhost:3000/questions')
             .then(responses => responses.json())
             .then(data => {
-                console.log(data);
                 question = data.questionText;
                 id = data.id;
-                console.log(id);
             });
 
     })
-    onMount(()=>{
-        fetch (opciones)
+    onMount(() => {
+        fetch(options)
             .then(responses => responses.json())
             .then(data => {
-                console.log(data.optionText);
                 answers[0].title = data[0].title;
             });
 
     })
-
 
 
 </script>
