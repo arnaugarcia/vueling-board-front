@@ -6,7 +6,7 @@
     import {onMount} from "svelte";
     import {getCookie} from "svelte-cookie";
 
-    const cookie = getCookie('auth');
+    const cookie = getCookie('username');
 
     if (!cookie || cookie === '') {
         window.location.href = '/games/login';
