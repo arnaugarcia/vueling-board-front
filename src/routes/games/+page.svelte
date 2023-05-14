@@ -9,7 +9,7 @@
 
     onMount(() => {
         username = getCookie('username');
-        fetch('http://localhost:3000/games')
+        fetch('http://10.5.238.248:3000/games')
             .then(response => response.json())
             .then(data => {
                 games = data;
@@ -22,7 +22,7 @@
             console.log('redirecting to login')
         }
 
-        fetch('http://localhost:3000/players', {
+        fetch('http://10.5.238.248:3000/players', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

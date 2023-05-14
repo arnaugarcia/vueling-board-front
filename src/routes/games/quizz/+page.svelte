@@ -14,7 +14,7 @@
     ];
     let question = 'prueba1'
     let id = 0;
-    let options = 'http://localhost:3000/questions/' + id + '/options';
+    let options = 'http://10.5.238.248:3000/questions/' + id + '/options';
 
     onMount(() => {
         const cookie = getCookie('username');
@@ -25,7 +25,7 @@
             window.location.href = '/games/login';
         }
 
-        fetch('http://localhost:3000/questions')
+        fetch('http://10.5.238.248:3000/questions')
             .then(responses => responses.json())
             .then(data => {
                 question = data.questionText;
