@@ -4,17 +4,7 @@
 <script>
     import AnswerComponent from '/src/components/quizz/answer.svelte'
     import {onMount} from "svelte";
-    let question = 'prueba1'
-
-    onMount(() => {
-        fetch ('http://localhost:3000/questions')
-            .then(responses => responses.json())
-            .then(data => {
-                console.log(data);
-                question = data[0].questionText;
-            });
-    })
-
+    import {getCookie} from "svelte-cookie";
 
     let answers = [
         {id: '0', title: 'Respuesta 1'},
@@ -22,6 +12,36 @@
         {id: '2', title: 'Respuesta 3'},
         {id: '3', title: 'Respuesta 4'}
     ];
+    let question = 'prueba1'
+    let id = 0;
+    let options = 'http://localhost:3000/questions/' + id + '/options';
+
+    onMount(() => {
+        const cookie = getCookie('username');
+
+        console.log('Authenticating user: ' + cookie);
+
+        if (!cookie || cookie === '') {
+            window.location.href = '/games/login';
+        }
+
+        fetch('http://localhost:3000/questions')
+            .then(responses => responses.json())
+            .then(data => {
+                question = data.questionText;
+                id = data.id;
+            });
+
+    })
+    onMount(() => {
+        fetch(options)
+            .then(responses => responses.json())
+            .then(data => {
+                if (data[0]) answers[0].title = data[0].title;
+            });
+
+    })
+
 
 </script>
 
@@ -33,13 +53,11 @@
 <div class="row">
     <div class="col-lg- mx-auto mb-4">
         <div class="row">
-
             {#each answers as answer, i}
 
                 <AnswerComponent option={answer} index={i}/>
 
             {/each}
-
         </div>
     </div>
 </div>
