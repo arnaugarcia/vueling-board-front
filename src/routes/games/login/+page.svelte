@@ -6,7 +6,7 @@
         const username = event.target.user.value;
         if (username && document) {
             setCookie('username', username, {expires: 1})
-            window.location.href = '/games/quizz';
+            window.location.href = '/games/wait-list';
         }
     }
 </script>
