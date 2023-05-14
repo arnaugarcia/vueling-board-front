@@ -36,7 +36,7 @@
     <ul class="menu-inner py-1">
         <!-- Apps & Pages -->
         <li class="menu-item">
-            <a href="" class="menu-link">
+            <a href="/chat" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-messages"></i>
                 <div data-i18n="Chat">Chat</div>
             </a>
